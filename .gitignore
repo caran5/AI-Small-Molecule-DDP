@@ -1,0 +1,37 @@
+# Model checkpoints (large files)
+*.pt
+*.pth
+*.pkl
+*.joblib
+
+# Cache and build directories
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.egg
+.DS_Store
+
+# Large data files
+*.csv
+*.h5
+*.hdf5
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs (very large)
+*.log
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# Keep only essential configs and code
+# Don't ignore: .md files, .py files, .txt, visualizations
