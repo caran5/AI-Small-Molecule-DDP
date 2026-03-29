@@ -1,0 +1,89 @@
+{
+  "phase": "3.2",
+  "title": "Feature Selection via Correlation",
+  "total_features_available": 24,
+  "selected_features": 15,
+  "selected_feature_names": [
+    "MolLogP",
+    "NumAromaticRings",
+    "NumRings",
+    "TPSA",
+    "TPSA_2",
+    "MolWt",
+    "LabuteASA",
+    "BertzCT",
+    "Kappa2",
+    "NumAtoms",
+    "NumHeavyAtoms",
+    "Chi0",
+    "Kappa1",
+    "Kappa3",
+    "NumHDonors"
+  ],
+  "selected_feature_indices": [
+    17,
+    3,
+    2,
+    8,
+    22,
+    9,
+    18,
+    11,
+    15,
+    0,
+    1,
+    12,
+    14,
+    16,
+    5
+  ],
+  "all_correlations": {
+    "MolLogP": 0.9999999999999998,
+    "NumAromaticRings": 0.5686910625204135,
+    "NumRings": 0.4653804422180373,
+    "TPSA": 0.4468820439150268,
+    "TPSA_2": 0.4468820439150268,
+    "MolWt": 0.4381883521711082,
+    "LabuteASA": 0.4229526397809761,
+    "BertzCT": 0.4045443916620862,
+    "Kappa2": 0.3841148936947597,
+    "NumAtoms": 0.3754409215683061,
+    "NumHeavyAtoms": 0.3754409215683061,
+    "Chi0": 0.3359668160275715,
+    "Kappa1": 0.31261640499961546,
+    "Kappa3": 0.3115289958102622,
+    "NumHDonors": 0.30958475620540327,
+    "NumRotatableBonds": 0.3074613573751344,
+    "NumRotatableBonds_2": 0.3074613573751344,
+    "NumHeteroatoms": 0.28621486234698235,
+    "FractionCSP3": 0.23855172914052564,
+    "NumHAcceptors": 0.22994596374664214,
+    "HallKierAlpha": 0.19615672523487132,
+    "NumSaturatedRings": 0.1643642791566081,
+    "NumAromaticHeterocycles": 0.13443427520901374,
+    "NumAliphaticRings": 0.11838857845024231
+  },
+  "model_comparison": [
+    {
+      "name": "Model 1: Original 9 Features",
+      "dimensions": 9,
+      "rmse": 1.163421606210781,
+      "mape": 40.87380552141583,
+      "success_pct": 44.0
+    },
+    {
+      "name": "Model 2: All 24 Features",
+      "dimensions": 24,
+      "rmse": 9.078477259419639e-15,
+      "mape": 3.471890757987532e-13,
+      "success_pct": 100.0
+    },
+    {
+      "name": "Model 3: Selected 15 Features",
+      "dimensions": 15,
+      "rmse": 2.274436105511886e-14,
+      "mape": 1.1587704140083196e-12,
+      "success_pct": 100.0
+    }
+  ]
+}

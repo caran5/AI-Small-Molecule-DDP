@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-03-27T08:47:25.874758",
+  "test_type": "Honest Validation with Baselines",
+  "molecules": 500,
+  "test_size": 75,
+  "test_properties": "LogP (lipophilicity)",
+  "metrics": {
+    "linear_regression": {
+      "rmse": 7.267899022532794e-16,
+      "mape": 5.967298170810684e-16,
+      "success_20pct": 1.0
+    },
+    "random_forest": {
+      "rmse": 0.4316008515766283,
+      "mape": 0.03579840824359898,
+      "success_20pct": 0.9066666666666666
+    },
+    "mlpdeep": {
+      "rmse": 0.2685179544884826,
+      "mape": 0.1493246365922474,
+      "success_20pct": 0.64
+    }
+  },
+  "verdict": "\u274c MEDIOCRE",
+  "improvement_vs_linear": -26851.795448848185,
+  "improvement_vs_rf": 37.78558278845084
+}

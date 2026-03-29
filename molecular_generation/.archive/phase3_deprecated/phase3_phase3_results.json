@@ -1,0 +1,35 @@
+{
+  "phase": "3.3",
+  "title": "Ensemble Voting (Final Phase)",
+  "ensemble_weights": {
+    "linear_regression": 0.2,
+    "random_forest": 0.2,
+    "gradient_boosting": 0.6000000000000001
+  },
+  "model_comparison": {
+    "Linear Regression": {
+      "rmse": 1.4463327210645586e-15,
+      "mape": 1.0326369926538157e-13,
+      "success_pct": 100.0
+    },
+    "Random Forest": {
+      "rmse": 0.10911394235853483,
+      "mape": 5.209364856997686,
+      "success_pct": 98.66666666666667
+    },
+    "Gradient Boosting": {
+      "rmse": 0.10024605250149908,
+      "mape": 3.1230863610739337,
+      "success_pct": 98.66666666666667
+    },
+    "Ensemble (Weighted)": {
+      "rmse": 0.079137414958532,
+      "mape": 1.1141227260639173,
+      "success_pct": 100.0
+    }
+  },
+  "best_model": "Linear Regression",
+  "best_accuracy": 100.0,
+  "features_used": 15,
+  "molecules_tested": 75
+}

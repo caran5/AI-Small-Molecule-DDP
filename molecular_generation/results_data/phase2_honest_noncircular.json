@@ -1,0 +1,33 @@
+{
+  "timestamp": "2026-03-27T09:06:37.047751",
+  "phase": 2,
+  "test_type": "Regularization Test - Reduced Params (18K) + Dropout (0.7)",
+  "test_purpose": "Does regularization fix overfitting? Can we beat Linear (50.7%)?",
+  "molecules": 500,
+  "test_size": 75,
+  "features": "Structural only (10 features: NumAtoms, NumHeavyAtoms, Rings, AromaticRings, Heteroatoms, HBD, HBA, RotatableBonds, TPSA, MolWt)",
+  "target": "LogP (NOT included in features)",
+  "success_metric": "\u00b120% error (\u00b10.2 normalized units)",
+  "models": {
+    "linear_regression": {
+      "type": "baseline",
+      "rmse": 0.7032286375766362,
+      "mape": 0.5106891281748033,
+      "success_20pct": 0.5066666666666667
+    },
+    "random_forest": {
+      "type": "baseline",
+      "rmse": 0.834715220406557,
+      "mape": 0.5555688269509206,
+      "success_20pct": 0.38666666666666666
+    },
+    "mlpdeep": {
+      "type": "proposed",
+      "rmse": 0.8837283770994855,
+      "mape": 0.5024506600463394,
+      "success_20pct": 0.4266666666666667
+    }
+  },
+  "winner": "Linear",
+  "verdict": "\u274c FAIL - MLPDeep still worse than Linear. Problem is not just overfitting."
+}

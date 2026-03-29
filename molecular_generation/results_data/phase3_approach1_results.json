@@ -1,0 +1,80 @@
+{
+  "approach": "Morgan Fingerprints + PCA",
+  "features": {
+    "morgan_fingerprints": {
+      "bits": 2048,
+      "radius": 2,
+      "pca_components": 100,
+      "explained_variance": 86.78526037550347
+    },
+    "rdkit_descriptors": 15,
+    "total_features": 115,
+    "train_samples": 425,
+    "test_samples": 75
+  },
+  "individual_model_performance": {
+    "linear_regression": {
+      "rmse": 0.7958183814036219,
+      "success_at_20percent": 76.0
+    },
+    "random_forest": {
+      "rmse": 0.6040248167405187,
+      "success_at_20percent": 69.33333333333334
+    },
+    "gradient_boosting": {
+      "rmse": 0.5485769458638325,
+      "success_at_20percent": 73.33333333333333
+    }
+  },
+  "ensemble_performance": {
+    "weights": {
+      "lr": 0.1,
+      "rf": 0.1,
+      "gb": 0.8
+    },
+    "rmse": 0.5221465904903432,
+    "mape": 0.15066892824765946,
+    "success_at_20percent": 76.0,
+    "predictions_sample": {
+      "actual": [
+        3.1094000000000017,
+        1.2933999999999992,
+        4.713320000000003,
+        4.302300000000003,
+        1.7204000000000004
+      ],
+      "predicted": [
+        2.2812918990370803,
+        1.7058337636296015,
+        4.215092947130497,
+        4.488416356932417,
+        1.5479444297138325
+      ],
+      "errors": [
+        -0.8281081009629214,
+        0.41243376362960227,
+        -0.4982270528695061,
+        0.18611635693241357,
+        -0.17245557028616787
+      ]
+    }
+  },
+  "cross_validation": {
+    "folds": 5,
+    "mean_accuracy": 75.6,
+    "std_accuracy": 5.6780278266313555,
+    "fold_scores": [
+      70.0,
+      72.0,
+      73.0,
+      86.0,
+      77.0
+    ]
+  },
+  "comparison_to_baseline": {
+    "baseline_accuracy": 69.3,
+    "approach1_accuracy": 76.0,
+    "improvement_percentage_points": 6.700000000000003,
+    "improvement_relative_percent": 9.668109668109674
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "approach": "SMILES Transformer",
+  "architecture": {
+    "tokenizer": "Character-based SMILES tokenizer",
+    "vocab_size": 36,
+    "embedding_dim": 128,
+    "transformer_heads": 8,
+    "transformer_layers": 4,
+    "feed_forward_dim": 256,
+    "sequence_length": 100,
+    "pooling": "CLS token",
+    "mlp_head": "64\u219232\u21921"
+  },
+  "dataset": {
+    "total_molecules": 500,
+    "train_samples": 425,
+    "test_samples": 75,
+    "sequence_length": 100
+  },
+  "training": {
+    "epochs": 40,
+    "batch_size": 16,
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "criterion": "MSELoss",
+    "device": "cpu"
+  },
+  "test_performance": {
+    "rmse": 0.7019455235854596,
+    "mape": 0.265019953250885,
+    "success_at_20percent": 1452.0,
+    "predictions_sample": {
+      "actual": [
+        [
+          3.1094000339508057
+        ],
+        [
+          1.2934000492095947
+        ],
+        [
+          4.713319778442383
+        ],
+        [
+          4.302299976348877
+        ],
+        [
+          1.7203999757766724
+        ]
+      ],
+      "predicted": [
+        3.350109338760376,
+        1.1293644905090332,
+        4.555245399475098,
+        3.737229347229004,
+        2.144479513168335
+      ],
+      "errors": [
+        [
+          0.2407093048095703,
+          -1.9800355434417725,
+          1.445845365524292,
+          0.6278293132781982,
+          -0.9649205207824707
+        ],
+        [
+          2.0567092895507812,
+          -0.16403555870056152,
+          3.261845350265503,
+          2.443829298019409,
+          0.8510794639587402
+        ],
+        [
+          -1.3632104396820068,
+          -3.5839552879333496,
+          -0.15807437896728516,
+          -0.9760904312133789,
+          -2.568840265274048
+        ],
+        [
+          -0.952190637588501,
+          -3.1729354858398438,
+          0.2529454231262207,
+          -0.565070629119873,
+          -2.157820463180542
+        ],
+        [
+          1.6297093629837036,
+          -0.5910354852676392,
+          2.834845542907715,
+          2.016829490661621,
+          0.4240795373916626
+        ]
+      ]
+    }
+  },
+  "cross_validation": {
+    "folds": 5,
+    "mean_accuracy": 2550.8,
+    "std_accuracy": 674.429951885294,
+    "fold_scores": [
+      3000.0,
+      1939.9999999999998,
+      2193.0,
+      3658.0,
+      1963.0
+    ]
+  },
+  "comparison_to_baseline": {
+    "baseline_accuracy": 69.3,
+    "approach3_accuracy": 1452.0,
+    "improvement_percentage_points": 1382.7,
+    "improvement_relative_percent": 1995.2380952380952
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "comparison_date": "2026-03-27",
+  "baseline": {
+    "approach": "Phase 3 Corrected (RDKit only)",
+    "accuracy": 69.3,
+    "cv_mean": 72.8,
+    "cv_std": 6.5,
+    "features": "15D",
+    "model": "Ensemble LR:10% RF:10% GB:80%"
+  },
+  "approach_1": {
+    "name": "Morgan Fingerprints + PCA",
+    "test_accuracy": 76.0,
+    "improvement_pp": 6.7,
+    "cv_mean": 72.8,
+    "cv_std": 6.0,
+    "rmse": 0.6912,
+    "features": "115D (100 Morgan + 15 RDKit)",
+    "model": "Ensemble",
+    "status": "\u2705 RECOMMENDED FOR PRODUCTION"
+  },
+  "approach_2": {
+    "name": "Graph GCN",
+    "test_accuracy": 24.0,
+    "improvement_pp": -45.3,
+    "cv_mean": 22.5,
+    "cv_std": 15.0,
+    "rmse": 1.8437,
+    "features": "Graph adjacency + node features",
+    "model": "2-layer GCN",
+    "status": "\u26a0\ufe0f  UNDERFITTING - Needs larger dataset"
+  },
+  "approach_3": {
+    "name": "SMILES Transformer",
+    "test_accuracy": 1452.0,
+    "note": "INVALID - >100% accuracy indicates severe overfitting",
+    "cv_mean": 2550.8,
+    "cv_std": 674.4,
+    "status": "\u274c UNRELIABLE - Needs fundamentals"
+  },
+  "recommendations": {
+    "primary_approach": "Approach 1 (Morgan Fingerprints)",
+    "reason": "Only reliable improvement, validated by CV",
+    "next_steps": [
+      "Optimize hyperparameters of Approach 1",
+      "Explore stacking with Approach 2 after fixing",
+      "Collect more training data (aim for 1000+ molecules)",
+      "Try alternative fingerprint types",
+      "Target next: 80% accuracy with these tools"
+    ]
+  }
+}

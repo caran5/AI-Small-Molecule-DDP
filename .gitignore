@@ -35,3 +35,11 @@ ENV/
 
 # Keep only essential configs and code
 # Don't ignore: .md files, .py files, .txt, visualizations
+
+# ignore large/generated files inside molecular_generation
+molecular_generation/venv/
+molecular_generation/checkpoints/
+molecular_generation/build/
+molecular_generation/__pycache__/
+**/__pycache__/
+*.pyc

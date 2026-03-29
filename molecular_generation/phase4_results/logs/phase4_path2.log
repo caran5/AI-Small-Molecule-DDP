@@ -1,0 +1,20 @@
+================================================================================
+PHASE 4 PATH 2: FEATURE ENGINEERING (EXTENDED)
+================================================================================
+
+[SETUP] Loading data...
+Extracting src/data/chembl_34_sqlite.tar.gz...
+Found database: /var/folders/jl/_rwgsk7d7nndr2dwx02gtvx80000gn/T/tmpkxz9b30a/chembl_34/chembl_34_sqlite/chembl_34.db
+Found 500 molecules in database
+✓ Loaded 500 molecules from ChemBL database
+  ✓ Loaded 500 molecules
+
+[FEATURES] Extracting 200+ dimensional feature set...
+  Extracting features for all molecules...
+Traceback (most recent call last):
+  File "/Users/ceejayarana/diffusion_model/molecular_generation/phase4_path2_features.py", line 200, in <module>
+    feat = extract_comprehensive_features(smi)
+  File "/Users/ceejayarana/diffusion_model/molecular_generation/phase4_path2_features.py", line 106, in extract_comprehensive_features
+    float(Descriptors.NumBridgeheads(mol)),
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'rdkit.Chem.Descriptors' has no attribute 'NumBridgeheads'. Did you mean: 'NumBridgeheadAtoms'?

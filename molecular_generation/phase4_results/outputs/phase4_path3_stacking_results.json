@@ -1,0 +1,30 @@
+{
+  "approach": "Phase 4 Path 3: Stacking Ensemble",
+  "baseline_accuracy": 76.0,
+  "architecture": {
+    "input_features": 115,
+    "base_models": 9,
+    "stacking_folds": 5,
+    "meta_features": 9,
+    "meta_learner": "GradientBoosting (max_depth=3)"
+  },
+  "base_models": [
+    "linear",
+    "ridge",
+    "lasso",
+    "rf_shallow",
+    "rf_deep",
+    "gb_slow",
+    "gb_fast",
+    "svr",
+    "knn"
+  ],
+  "performance": {
+    "test_accuracy": 77.33333333333333,
+    "cv_mean": 76.6,
+    "cv_std": 5.571355310873648,
+    "rmse": 0.6034350095110542,
+    "mape": 0.23803702417818476,
+    "improvement_pp": 1.3333333333333286
+  }
+}

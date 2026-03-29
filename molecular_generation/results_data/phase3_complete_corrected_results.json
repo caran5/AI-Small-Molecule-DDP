@@ -1,0 +1,43 @@
+{
+  "timestamp": "2026-03-27T10:18:24.724405",
+  "phase": "3_complete_corrected",
+  "data_leakage_fixed": true,
+  "mollogp_in_features": false,
+  "accuracy_progression": {
+    "baseline_9d": 0.44,
+    "engineering_24d": 0.6133333333333333,
+    "selected_15d": 0.6266666666666667,
+    "ensemble_15d": 0.6933333333333334,
+    "cv_mean": 0.728,
+    "cv_std": 0.06523802572120034
+  },
+  "improvements": {
+    "engineering": 0.17333333333333328,
+    "selection": 0.01333333333333342,
+    "ensemble": 0.06666666666666665,
+    "total": 0.25333333333333335
+  },
+  "final_model": {
+    "features": 15,
+    "ensemble_weights": {
+      "linear_regression": 0.1,
+      "random_forest": 0.1,
+      "gradient_boosting": 0.8
+    },
+    "rmse": 0.6912498885738574,
+    "success_20pct": 0.6933333333333334
+  },
+  "cross_validation": {
+    "folds": 5,
+    "mean": 0.728,
+    "std": 0.06523802572120034,
+    "scores": [
+      0.7,
+      0.76,
+      0.66,
+      0.84,
+      0.68
+    ]
+  },
+  "note": "CORRECTED: No data leakage (MolLogP is target ONLY, not feature)"
+}

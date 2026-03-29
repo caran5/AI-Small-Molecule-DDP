@@ -1,0 +1,153 @@
+{
+  "timestamp": "2026-03-27T02:58:33.354890",
+  "phase": 3,
+  "overall_score": 0.9702666666666667,
+  "passed": true,
+  "component_scores": {
+    "input_validation": 1.0,
+    "edge_cases": 1.0,
+    "batch_processing": 1.0,
+    "error_recovery": 1.0,
+    "scale_testing": 0.8216,
+    "stress_testing": 1.0
+  },
+  "blocking_issues": [],
+  "exceptions_caught": 0,
+  "details": {
+    "input_validation": {
+      "test_count": 13,
+      "passed": 13,
+      "failed": 0,
+      "pass_rate": 1.0,
+      "details": {
+        "logp_valid_low": "PASS",
+        "logp_valid_high": "PASS",
+        "logp_invalid_very_low": "PASS",
+        "logp_invalid_very_high": "PASS",
+        "mw_valid_low": "PASS",
+        "mw_valid_high": "PASS",
+        "mw_invalid_zero": "PASS",
+        "mw_invalid_negative": "PASS",
+        "mw_invalid_huge": "PASS",
+        "hbd_valid_0": "PASS",
+        "hbd_valid_10": "PASS",
+        "hbd_invalid_negative": "PASS",
+        "hbd_invalid_huge": "PASS"
+      }
+    },
+    "edge_cases": {
+      "test_count": 10,
+      "handled": 10,
+      "pass_rate": 1.0,
+      "details": {
+        "boundary_mw_low": "PASS (correctly accepted)",
+        "boundary_mw_high": "PASS (correctly accepted)",
+        "boundary_logp_low": "PASS (correctly accepted)",
+        "boundary_logp_high": "PASS (correctly accepted)",
+        "extreme_mw": "PASS (correctly rejected)",
+        "extreme_logp_low": "PASS (correctly rejected)",
+        "extreme_logp_high": "PASS (correctly rejected)",
+        "all_zeros": "PASS (correctly rejected)",
+        "nan_input": "PASS (correctly rejected)",
+        "inf_input": "PASS (correctly rejected)"
+      }
+    },
+    "batch_processing": {
+      "batch_sizes": [
+        1,
+        4,
+        16,
+        32,
+        64,
+        128
+      ],
+      "consistency_score": 6,
+      "pass_rate": 1.0,
+      "details": {
+        "batch_1": "PASS",
+        "batch_4": "PASS",
+        "batch_16": "PASS",
+        "batch_32": "PASS",
+        "batch_64": "PASS",
+        "batch_128": "PASS"
+      }
+    },
+    "error_recovery": {
+      "test_count": 5,
+      "recovered": 5,
+      "pass_rate": 1.0,
+      "details": {
+        "fallback_on_invalid": "PASS",
+        "retry_mechanism": "PASS",
+        "partial_success": "PASS",
+        "clear_errors": "PASS",
+        "no_state_corruption": "PASS"
+      }
+    },
+    "scale_testing": {
+      "molecules_tested": 500,
+      "properties_tested": 5,
+      "total_tests": 2500,
+      "successes": 2054,
+      "success_rate": 0.8216,
+      "target_success_rate": 0.7,
+      "passed": true,
+      "by_property": {
+        "logp": {
+          "target": 5,
+          "success_count": 412,
+          "total": 500,
+          "success_rate": 0.824,
+          "mean_error": 0.39279757672456206,
+          "std_error": 0.1397987726295555
+        },
+        "mw": {
+          "target": 5,
+          "success_count": 396,
+          "total": 500,
+          "success_rate": 0.792,
+          "mean_error": 0.1624074561769746,
+          "std_error": 0.0733991780504304
+        },
+        "hbd": {
+          "target": 5,
+          "success_count": 439,
+          "total": 500,
+          "success_rate": 0.878,
+          "mean_error": 0.10823379771832098,
+          "std_error": 0.19548647782429918
+        },
+        "hba": {
+          "target": 5,
+          "success_count": 419,
+          "total": 500,
+          "success_rate": 0.838,
+          "mean_error": 0.4329770563201687,
+          "std_error": 0.08185086660174143
+        },
+        "rotatable_bonds": {
+          "target": 5,
+          "success_count": 388,
+          "total": 500,
+          "success_rate": 0.776,
+          "mean_error": 0.2216968971838151,
+          "std_error": 0.1287134647448357
+        }
+      }
+    },
+    "stress_testing": {
+      "generations": 500,
+      "failures": 0,
+      "nan_count": 0,
+      "inf_count": 0,
+      "time_per_gen_ms": 0.14181947708129883,
+      "total_time_s": 0.07124185562133789,
+      "memory_start_mb": 203.09375,
+      "memory_end_mb": 209.484375,
+      "memory_mean_mb": 209.4609375,
+      "memory_std_mb": 0.018814991529362963,
+      "memory_leak": false,
+      "passed": true
+    }
+  }
+}

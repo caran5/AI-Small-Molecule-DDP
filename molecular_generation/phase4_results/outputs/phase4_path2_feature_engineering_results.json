@@ -1,0 +1,21 @@
+{
+  "approach": "Phase 4 Path 2: Feature Engineering",
+  "baseline_accuracy": 76.0,
+  "path1_accuracy": 81.3,
+  "features": {
+    "original": 115,
+    "extracted": 24,
+    "selected": 20,
+    "morgan_pca": 200,
+    "combined": 220
+  },
+  "performance": {
+    "test_accuracy": 98.66666666666667,
+    "cv_mean": 99.0,
+    "cv_std": 0.8944271909999159,
+    "rmse": 0.16396114293050607,
+    "mape": 0.014145802896673639,
+    "improvement_from_baseline_pp": 22.66666666666667,
+    "change_from_path1_pp": 17.366666666666674
+  }
+}

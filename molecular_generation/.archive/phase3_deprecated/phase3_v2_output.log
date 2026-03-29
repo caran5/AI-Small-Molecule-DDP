@@ -1,0 +1,16 @@
+/Users/ceejayarana/diffusion_model/molecular_generation/phase3_phase1_rdkit_descriptors_v2.py:36: DeprecationWarning: Python 3.14 will, by default, filter extracted tar archives and reject files or modify their metadata. Use the filter argument to control this behavior.
+  tar.extractall(tmpdir)
+cp: src/data/.chembl_extracted: fcopyfile failed: No space left on device
+================================================================================
+PHASE 3 PHASE 1 v2: RDKit Descriptors (Direct Loading)
+================================================================================
+
+Extracting ChEMBL database (one-time)...
+   Found: /var/folders/jl/_rwgsk7d7nndr2dwx02gtvx80000gn/T/tmpizts35fh/chembl_34/chembl_34_sqlite/chembl_34.db
+   Cached for future runs
+
+Loading molecules from database...
+Traceback (most recent call last):
+  File "/Users/ceejayarana/diffusion_model/molecular_generation/phase3_phase1_rdkit_descriptors_v2.py", line 50, in <module>
+    conn = sqlite3.connect(db_file)
+sqlite3.OperationalError: unable to open database file

@@ -1,0 +1,244 @@
+{
+  "num_tests": 6,
+  "tests": [
+    {
+      "total_trials": 50,
+      "successful": 0,
+      "failed": 50,
+      "success_rate": 0.0,
+      "target_properties": {
+        "logp": 3.0,
+        "mw": 350,
+        "hbd": 2
+      },
+      "guidance_scale": 1.0,
+      "num_steps": 50,
+      "errors_by_property": {
+        "logp": {
+          "mean_error": 1.5132662717446193,
+          "std_error": 0.7684934407692408,
+          "max_error": 2.9926711028384285,
+          "min_error": 0.059162095150415706
+        },
+        "mw": {
+          "mean_error": 76.3420106863387,
+          "std_error": 39.99759852978716,
+          "max_error": 149.2170756367081,
+          "min_error": 1.7505685291863529
+        },
+        "hbd": {
+          "mean_error": 1.24,
+          "std_error": 0.7631513611335564,
+          "max_error": 2.0,
+          "min_error": 0.0
+        }
+      }
+    },
+    {
+      "total_trials": 10,
+      "successful": 0,
+      "failed": 10,
+      "success_rate": 0.0,
+      "target_properties": {
+        "logp": 3.5,
+        "mw": 350,
+        "hbd": 2
+      },
+      "guidance_scale": 1.0,
+      "num_steps": 50,
+      "errors_by_property": {
+        "logp": {
+          "mean_error": 1.829449464777543,
+          "std_error": 0.9169386852400749,
+          "max_error": 2.9608696778907353,
+          "min_error": 0.3839559950298259
+        },
+        "mw": {
+          "mean_error": 90.5446654613678,
+          "std_error": 27.29321752805477,
+          "max_error": 135.3437912908753,
+          "min_error": 50.802437452957406
+        },
+        "hbd": {
+          "mean_error": 1.1,
+          "std_error": 0.8306623862918074,
+          "max_error": 2.0,
+          "min_error": 0.0
+        }
+      }
+    },
+    {
+      "total_trials": 10,
+      "successful": 0,
+      "failed": 10,
+      "success_rate": 0.0,
+      "target_properties": {
+        "logp": 10.0,
+        "mw": 500
+      },
+      "guidance_scale": 1.0,
+      "num_steps": 50,
+      "errors_by_property": {
+        "logp": {
+          "mean_error": 7.817215762189255,
+          "std_error": 0.910965036279892,
+          "max_error": 9.69815096073407,
+          "min_error": 6.241444549543576
+        },
+        "mw": {
+          "mean_error": 142.15506088414867,
+          "std_error": 79.98354181667993,
+          "max_error": 275.3754015144429,
+          "min_error": 11.059071365202954
+        }
+      }
+    },
+    {
+      "total_trials": 10,
+      "successful": 0,
+      "failed": 10,
+      "success_rate": 0.0,
+      "target_properties": {
+        "logp": 3.5,
+        "mw": 10000
+      },
+      "guidance_scale": 1.0,
+      "num_steps": 50,
+      "errors_by_property": {
+        "logp": {
+          "mean_error": 1.7397176743376623,
+          "std_error": 0.9566609885820521,
+          "max_error": 3.192394837008324,
+          "min_error": 0.507950902937151
+        },
+        "mw": {
+          "mean_error": 9669.11276637187,
+          "std_error": 117.34349337592592,
+          "max_error": 9790.199969116706,
+          "min_error": 9504.47465835903
+        }
+      }
+    },
+    {
+      "total_trials": 10,
+      "successful": 0,
+      "failed": 10,
+      "success_rate": 0.0,
+      "target_properties": {
+        "logp": -5.0,
+        "mw": 50
+      },
+      "guidance_scale": 1.0,
+      "num_steps": 50,
+      "errors_by_property": {
+        "logp": {
+          "mean_error": 7.022432086132419,
+          "std_error": 1.6860164539835207,
+          "max_error": 9.979613773923642,
+          "min_error": 5.006248597935781
+        },
+        "mw": {
+          "mean_error": 264.4350455233414,
+          "std_error": 83.2170053115594,
+          "max_error": 442.1000938383442,
+          "min_error": 153.5819304975965
+        }
+      }
+    },
+    {
+      "total_trials": 10,
+      "successful": 0,
+      "failed": 10,
+      "success_rate": 0.0,
+      "target_properties": {
+        "logp": 3.5,
+        "hbd": 50
+      },
+      "guidance_scale": 1.0,
+      "num_steps": 50,
+      "errors_by_property": {
+        "logp": {
+          "mean_error": 1.4433979399267731,
+          "std_error": 1.2125263108785922,
+          "max_error": 3.4678394583164587,
+          "min_error": 0.06459514178754677
+        },
+        "hbd": {
+          "mean_error": 47.7,
+          "std_error": 1.3453624047073711,
+          "max_error": 50.0,
+          "min_error": 46.0
+        }
+      }
+    }
+  ],
+  "summary": {
+    "average_success_rate": 0.0,
+    "best_test": {
+      "total_trials": 50,
+      "successful": 0,
+      "failed": 50,
+      "success_rate": 0.0,
+      "target_properties": {
+        "logp": 3.0,
+        "mw": 350,
+        "hbd": 2
+      },
+      "guidance_scale": 1.0,
+      "num_steps": 50,
+      "errors_by_property": {
+        "logp": {
+          "mean_error": 1.5132662717446193,
+          "std_error": 0.7684934407692408,
+          "max_error": 2.9926711028384285,
+          "min_error": 0.059162095150415706
+        },
+        "mw": {
+          "mean_error": 76.3420106863387,
+          "std_error": 39.99759852978716,
+          "max_error": 149.2170756367081,
+          "min_error": 1.7505685291863529
+        },
+        "hbd": {
+          "mean_error": 1.24,
+          "std_error": 0.7631513611335564,
+          "max_error": 2.0,
+          "min_error": 0.0
+        }
+      }
+    },
+    "worst_test": {
+      "total_trials": 50,
+      "successful": 0,
+      "failed": 50,
+      "success_rate": 0.0,
+      "target_properties": {
+        "logp": 3.0,
+        "mw": 350,
+        "hbd": 2
+      },
+      "guidance_scale": 1.0,
+      "num_steps": 50,
+      "errors_by_property": {
+        "logp": {
+          "mean_error": 1.5132662717446193,
+          "std_error": 0.7684934407692408,
+          "max_error": 2.9926711028384285,
+          "min_error": 0.059162095150415706
+        },
+        "mw": {
+          "mean_error": 76.3420106863387,
+          "std_error": 39.99759852978716,
+          "max_error": 149.2170756367081,
+          "min_error": 1.7505685291863529
+        },
+        "hbd": {
+          "mean_error": 1.24,
+          "std_error": 0.7631513611335564,
+          "max_error": 2.0,
+          "min_error": 0.0
+        }
+      }
+    }
+  }
+}

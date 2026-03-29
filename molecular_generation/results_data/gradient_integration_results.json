@@ -1,0 +1,48 @@
+{
+  "timestamp": "/Users/ceejayarana/diffusion_model/molecular_generation",
+  "device": "cpu",
+  "tests": {
+    "gradient_flow": {
+      "test": "gradient_flow",
+      "batch_size": 10,
+      "gradient_magnitude": 0.012927968055009842,
+      "gradient_std": 0.00040894575067795813,
+      "gradient_flow_ok": true,
+      "computation_graph_ok": true
+    },
+    "guidance_signal": {
+      "test": "guidance_signal",
+      "batch_size": 10,
+      "initial_loss": 1.0627663135528564,
+      "final_loss": 1.0611071586608887,
+      "loss_improvement": 0.0015611662274178711,
+      "guidance_applied": true
+    },
+    "iterative_guidance": {
+      "test": "iterative_guidance",
+      "num_steps": 5,
+      "batch_size": 10,
+      "loss_per_step": [
+        1.0803645849227905,
+        1.0756809711456299,
+        1.0671072006225586,
+        1.081900715827942,
+        1.0729022026062012
+      ],
+      "total_improvement": 0.006907281441523603
+    },
+    "batch_consistency": {
+      "test": "batch_consistency",
+      "num_trials": 5,
+      "trial_improvements": [
+        -0.0050837455891582,
+        -0.0013818496471649884,
+        -0.01045443953588878,
+        0.001227799298154696,
+        3.543541049521063e-05
+      ],
+      "avg_improvement": -0.003131360012712412,
+      "consistency": 0.9957684293031782
+    }
+  }
+}

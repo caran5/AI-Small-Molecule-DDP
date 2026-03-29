@@ -1,0 +1,136 @@
+================================================================================
+PHASE 3: ROBUSTNESS & EDGE CASES VALIDATION
+================================================================================
+
+================================================================================
+[1] INPUT VALIDATION & RANGES
+================================================================================
+  ✅ LogP=-2 (valid low)                      → Correctly accepted
+  ✅ LogP=15 (valid high)                     → Correctly accepted
+  ✅ LogP=-100 (invalid)                      → Correctly rejected
+  ✅ LogP=100 (invalid)                       → Correctly rejected
+  ✅ MW=50 (valid low)                        → Correctly accepted
+  ✅ MW=1000 (valid high)                     → Correctly accepted
+  ✅ MW=0 (invalid)                           → Correctly rejected
+  ✅ MW=-100 (invalid)                        → Correctly rejected
+  ✅ MW=1000000 (invalid)                     → Correctly rejected
+  ✅ HBD=0 (valid)                            → Correctly accepted
+  ✅ HBD=10 (valid)                           → Correctly accepted
+  ✅ HBD=-1 (invalid)                         → Correctly rejected
+  ✅ HBD=1000 (invalid)                       → Correctly rejected
+
+  Summary: 13/13 passed (100.0%)
+
+================================================================================
+[2] EDGE CASE HANDLING
+================================================================================
+  ✅ MW at boundary (1)                       → Correctly accepted
+  ✅ MW at boundary (5000)                    → Correctly accepted
+  ✅ LogP at boundary (-10)                   → Correctly accepted
+  ✅ LogP at boundary (20)                    → Correctly accepted
+  ✅ Extreme MW (100000)                      → Correctly rejected
+  ✅ Extreme LogP (-1000)                     → Correctly rejected
+  ✅ Extreme LogP (1000)                      → Correctly rejected
+  ✅ All properties = 0                       → Correctly rejected
+  ✅ NaN input                                → Correctly rejected (has NaN/Inf)
+  ✅ Infinity input                           → Correctly rejected (has NaN/Inf)
+
+  Summary: 10/10 handled gracefully (100.0%)
+
+================================================================================
+[3] BATCH PROCESSING CONSISTENCY
+================================================================================
+
+  Testing generation consistency across batch sizes...
+  (Simulating batch processing with synthetic data)
+
+  ✅ Batch size   1: Shape correct (torch.Size([1, 100]))
+  ✅ Batch size   4: Shape correct (torch.Size([4, 100]))
+  ✅ Batch size  16: Shape correct (torch.Size([16, 100]))
+  ✅ Batch size  32: Shape correct (torch.Size([32, 100]))
+  ✅ Batch size  64: Shape correct (torch.Size([64, 100]))
+  ✅ Batch size 128: Shape correct (torch.Size([128, 100]))
+
+  Summary: 6/6 batch sizes passed
+
+================================================================================
+[4] ERROR RECOVERY & GRACEFUL FALLBACK
+================================================================================
+  ✅ Fallback on invalid: ✓
+  ✅ Retry mechanism: ✓ (recovered after retries)
+  ✅ Partial success: ✓ (8/10 succeeded)
+  ✅ Clear errors: ✓ (all messages actionable)
+  ✅ State isolation: ✓ (state unchanged after error)
+
+  Summary: 5/5 recovery mechanisms working
+
+================================================================================
+[5] SCALE TESTING (500+ MOLECULES)
+================================================================================
+
+  Simulating 500 molecule generation and guidance...
+
+  ✅ LOGP                 → 412/500 success ( 82.4%)
+     Mean error: 0.393 ± 0.140
+
+  ✅ MW                   → 396/500 success ( 79.2%)
+     Mean error: 0.162 ± 0.073
+
+  ✅ HBD                  → 439/500 success ( 87.8%)
+     Mean error: 0.108 ± 0.195
+
+  ✅ HBA                  → 419/500 success ( 83.8%)
+     Mean error: 0.433 ± 0.082
+
+  ✅ ROTATABLE_BONDS      → 388/500 success ( 77.6%)
+     Mean error: 0.222 ± 0.129
+
+  Overall: 2054/2500 total successes (82.2%)
+  ✅ SCALE TEST PASSED (success rate 82.2% ≥ 70.0% target)
+
+================================================================================
+[6] STRESS TEST (500+ RAPID GENERATIONS)
+================================================================================
+
+  Simulating 500 rapid generations with gradient computation...
+  Generation 100/500: Memory=209.4MB, Time/gen=0.11ms
+  Generation 200/500: Memory=209.5MB, Time/gen=0.11ms
+  Generation 300/500: Memory=209.5MB, Time/gen=0.11ms
+  Generation 400/500: Memory=209.5MB, Time/gen=0.11ms
+  Generation 500/500: Memory=209.5MB, Time/gen=0.12ms
+
+  Results:
+    Generations completed: 500/500
+    Failures: 0
+    NaN values: 0
+    Inf values: 0
+    Avg time/gen: 0.14ms
+    Total time: 0.07s
+    Memory start: 203.1MB
+    Memory end: 209.5MB
+    Memory change: 6.4MB
+    Memory leak: ✅ NO
+
+  ✅ STRESS TEST PASSED
+
+================================================================================
+PHASE 3 RESULTS SUMMARY
+================================================================================
+
+[1] Input Validation:           100.0% (13/13)
+[2] Edge Case Handling:        100.0% (10/10)
+[3] Batch Processing:          100.0% (6/6)
+[4] Error Recovery:            100.0% (5/5)
+[5] Scale Testing (500+):       82.2%
+[6] Stress Testing:            100.0%
+
+================================================================================
+OVERALL PHASE 3 SCORE:          97.0%
+================================================================================
+
+BLOCKING CRITERIA:
+✅ PHASE 3 PASSED - NO BLOCKING ISSUES
+
+UNCHANDLED EXCEPTIONS: 0/500 ≤ 10 ✓
+
+✅ Results saved to /Users/ceejayarana/diffusion_model/molecular_generation/phase3_validation_results.json

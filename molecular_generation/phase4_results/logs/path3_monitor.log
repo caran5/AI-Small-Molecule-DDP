@@ -1,0 +1,61 @@
+Monitoring Path 3 execution...
+[1/120] Path 3 running (15 sec)...
+[2/120] Path 3 running (30 sec)...
+[3/120] Path 3 running (45 sec)...
+[4/120] Path 3 running (60 sec)...
+[5/120] Path 3 running (75 sec)...
+[6/120] Path 3 running (90 sec)...
+[7/120] Path 3 running (105 sec)...
+Process completed at iteration 8 (120 seconds)
+Final status check:
+-rw-r--r--@ 1 ceejayarana  staff   630B Mar 28 10:36 phase4_path3_stacking_results.json
+PATH 3 STACKING ENSEMBLE RESULTS
+================================================================================
+
+▶ PERFORMANCE:
+  • Baseline (Approach 1):         76.0%
+  • Path 3 (Stacking):             77.3%
+  • Improvement:                   +1.3pp
+  • CV Mean ± Std:                 76.6% ± 5.6%
+  • RMSE:                          0.6034
+  • MAPE:                          0.2380
+
+▶ ARCHITECTURE:
+  • Input features:                115D
+  • Base models:                   9
+  • Stacking folds:                5
+  • Meta-features:                 9D
+  • Meta-learner:                  Gradient Boosting (depth=3)
+
+▶ BASE MODEL LIST:
+   1. linear
+   2. ridge
+   3. lasso
+   4. rf_shallow
+   5. rf_deep
+   6. gb_slow
+   7. gb_fast
+   8. svr
+   9. knn
+
+▶ META-LEARNER FEATURE IMPORTANCE:
+   1. ridge          : 0.4631
+   2. linear         : 0.2332
+   3. lasso          : 0.1773
+   4. svr            : 0.0535
+   5. rf_deep        : 0.0204
+   6. gb_slow        : 0.0192
+   7. gb_fast        : 0.0191
+   8. rf_shallow     : 0.0123
+   9. knn            : 0.0020
+
+✓ Results saved to phase4_path3_stacking_results.json
+================================================================================
+
+⏱️  Total time: 1.6 minutes
+
+Final Sprint Progress:
+  Baseline:        76.0%
+  Path 1 best:     79-81%
+  Path 1 + 2:      81-84%
+  Path 1 + 2 + 3:  82-86%

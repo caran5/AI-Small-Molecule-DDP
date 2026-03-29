@@ -1,0 +1,73 @@
+{
+  "approach": "Graph Convolutional Network (GCN)",
+  "architecture": {
+    "node_features": 7,
+    "gcn1_output": 64,
+    "gcn2_output": 32,
+    "mlp_layers": "32\u219216\u21921",
+    "graph_pooling": "mean"
+  },
+  "dataset": {
+    "total_molecules": 500,
+    "train_samples": 425,
+    "test_samples": 75,
+    "atom_count_range": [
+      8,
+      77
+    ]
+  },
+  "training": {
+    "epochs": 30,
+    "batch_size": 16,
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "criterion": "MSELoss",
+    "device": "cpu"
+  },
+  "test_performance": {
+    "rmse": 1.9817870291035562,
+    "mape": 1.1280089916655223,
+    "success_at_20percent": 24.0,
+    "predictions_sample": {
+      "actual": [
+        3.1094000000000017,
+        1.2933999999999992,
+        4.713320000000003,
+        4.302300000000003,
+        1.7204000000000004
+      ],
+      "predicted": [
+        1.781427025794983,
+        1.6591917276382446,
+        2.9038991928100586,
+        1.3662573099136353,
+        2.7491159439086914
+      ],
+      "errors": [
+        -1.3279729742050188,
+        0.3657917276382454,
+        -1.8094208071899445,
+        -2.936042690086368,
+        1.028715943908691
+      ]
+    }
+  },
+  "cross_validation": {
+    "folds": 5,
+    "mean_accuracy": 30.0,
+    "std_accuracy": 5.966573556070519,
+    "fold_scores": [
+      26.0,
+      33.0,
+      23.0,
+      40.0,
+      28.000000000000004
+    ]
+  },
+  "comparison_to_baseline": {
+    "baseline_accuracy": 69.3,
+    "approach2_accuracy": 24.0,
+    "improvement_percentage_points": -45.3,
+    "improvement_relative_percent": -65.36796536796537
+  }
+}
